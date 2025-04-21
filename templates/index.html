@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini LLM Chat</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+    input, button { padding: 10px; margin: 5px 0; width: 100%; }
+    .result { background: white; padding: 15px; border-radius: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Mini LLM Generator</h1>
+  <form method="post">
+    <label>Type a prompt:</label>
+    <input type="text" name="prompt" placeholder="e.g. hel" required>
+    <button type="submit">Generate</button>
+  </form>
+
+  {% if generated %}
+    <div class="result">
+      <strong>Generated:</strong>
+      <p>{{ generated }}</p>
+    </div>
+  {% endif %}
+</body>
+</html>
